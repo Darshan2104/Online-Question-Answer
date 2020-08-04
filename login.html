@@ -5,44 +5,156 @@
     <meta charset="UTF-8">
     <title>Online Question Answer</title>
 </head>
+<style>
+    .header a:link,
+    a:visited {
+        background-color: rgb(255, 251, 210);
+        color: black;
+        padding: 14px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
 
+    .header a:hover,
+    a:active {
+        background-color: rgb(117, 224, 215);
+    }
+
+    .header {
+        background-color: rgb(164, 255, 247);
+    }
+
+    .all-browsers {
+        margin: 0;
+        padding: 5px;
+        background-color: rgb(107, 201, 193);
+    }
+
+    .all-browsers>h1,
+    .browser {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .browser {
+        background-color: rgb(255, 251, 210);
+    }
+
+    .browser>h2,
+    p {
+        margin: 4px;
+        font-size: 90%;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 3px;
+        background-color: rgb(164, 255, 247);
+        color: rgb(25, 98, 107);
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #6abadeba;
+        font-family: 'Arial';
+    }
+
+    .layout {
+        width: 382px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background: #23463f;
+        border-radius: 15px;
+
+    }
+
+    .layout,
+    h2 {
+        text-align: center;
+        color: #277582;
+        padding: 20px;
+    }
+
+    .layout,
+    label {
+        color: #08ffd1;
+        font-size: 17px;
+    }
+
+    #Uname {
+        width: 300px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        padding-left: 8px;
+    }
+
+    #Pass {
+        width: 300px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        padding-left: 8px;
+
+    }
+
+    #log {
+        width: 300px;
+        height: 30px;
+        border: none;
+        border-radius: 17px;
+        padding-left: 7px;
+        color: blue;
+    }
+
+    .a {
+        padding: 60px;
+    }
+</style>
 </head>
 
 <body>
 
     <div class="header">
-        <nav style="float:top"> <a href="index.html">
-                <h2><strong>Qeustion Answers</strong></h2>
-            </a>
-        </nav>
-        <!-- for space -->
-        <div class="tab"></div>
-        <!-- tabs  -->
-        <nav>
-            <a href="ask.html">Ask Question</a> |
-            <a href="categories.html">Categories</a> |
-            <a href="profile.html">Profile</a> |
-            <!-- <a href="#">Blog</a>| -->
-            <a href="registration.html">Registration</a><br />
-            <br />
-            <hr />
-        </nav>
-    </div>
-    <div class="layout" style="text-align:center;">
-        <h2>Login Page</h2>
-        <form action="#">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="pass">Password:</label><br>
-            <input type="password" id="pass" name="pass" required><br><br />
-            <input type="submit" name="submit" value="Submit">
-            <input type="reset" name="reset" value="reset">
-        </form>
-    </div>
 
-    <!-- Footer -->
-    <div class="footer" style="position: absolute;text-align: center;bottom:5px; padding:10px 0;">
-        <hr />
+        <nav style="float:top; padding: 10px 150px;"> <a href="index.html">
+                <h3><b>Qeustion Answers</b></h3>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- </nav> -->
+            <!-- tabs  -->
+            <!-- <nav id="lable" style="float:top;text-align:center;"> -->
+            <a href="index.html">Home</a>&nbsp;
+            <a href="ask.html">Ask Question</a> &nbsp;
+            <a href="categories.html">Categories</a>&nbsp;
+            <a href="profile.html">Profile</a>&nbsp;
+            <!-- <a href="#">Blog</a>| -->
+            <a href="registration.html">Registration</a>
+
+            <input type="text" placeholder="Search Profile" />
+        </nav>
+        <!-- <hr/> -->
+    </div>
+    <div class="a">
+        <div class="layout" style="text-align:center;padding:70px 20px">
+            <h2>Login Page</h2>
+            <form action="#">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="pass" required><br><br />
+                <input type="submit" name="submit" value="Submit">
+                <input type="reset" name="reset" value="reset">
+            </form>
+        </div>
+        <br><br>
+    </div>>
+    <div class="footer" style="text-align: center;bottom:5px; padding:10px 0;">
+
         Contect us on
         <a href="#"><i>Facebook</i></a> |
         <a href="#"><i>Instagram</i></a> |

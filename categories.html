@@ -6,44 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
     <style>
+        .header a:link,
+        a:visited {
+            background-color: rgb(255, 251, 210);
+            color: black;
+            padding: 14px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .header a:hover,
+        a:active {
+            background-color: rgb(117, 224, 215);
+        }
+
+        .header {
+            background-color: rgb(164, 255, 247);
+        }
+
+        .all-browsers {
+            margin: 0;
+            padding: 5px;
+            background-color: rgb(107, 201, 193);
+        }
+
+        .all-browsers>h1,
+        .browser {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .browser {
+            background-color: rgb(255, 251, 210);
+        }
+
+        .browser>h2,
+        p {
+            margin: 4px;
+            font-size: 90%;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(164, 255, 247);
+            color: rgb(25, 98, 107);
+        }
+    </style>
+    <style>
         th,
         td {
             border: 1px solid black;
             padding: 50px;
             border-spacing: 30px;
+            background-color: #4CAF50;
         }
 
+        .block,
         table {
             text-align: center;
             width: 100%;
             border-spacing: 30px;
+            background-color: rgb(107, 201, 193);
         }
     </style>
 </head>
 
 <body>
+    <hr>
     <div class="header">
-        <nav style="float:top;text-align:center"> <a href="index.html">
-                <h1><strong>Qeustion Answers</strong></h1>
+
+        <nav style="float:top; padding: 10px 150px;"> <a href="index.html">
+                <h3><b>Qeustion Answers</b></h3>
             </a>
-        </nav>
-        <!-- for space -->
-        <div class="tab"></div>
-        <!-- tabs  -->
-        <nav style="float:top;text-align:center">
-            <a href="index.html">Home</a> |
-            <a href="ask.html">Ask Question</a> |
-            <a href="profile.html">Profile</a> |
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- </nav> -->
+            <!-- tabs  -->
+            <!-- <nav id="lable" style="float:top;text-align:center;"> -->
+            <a href="index.html">Home</a>&nbsp;
+            <a href="ask.html">Ask Question</a> &nbsp;
+            <a href="profile.html">Profile</a>&nbsp;
             <!-- <a href="#">Blog</a>| -->
-            <a href="login.html">Login</a> |
-            <a href="registration.html">Registration</a><br />
-            <br />
+            <a href="login.html">Login</a>&nbsp;
+            <a href="registration.html">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
             <input type="text" placeholder="Search Profile" />
         </nav>
+        <hr />
     </div>
-    <br />
-    <hr />
-
     <div class="block" style="text-align: center;">
         <H1 style="padding: 30px;"><u>List of all categories </u></H1>
         <table>
@@ -78,10 +130,11 @@
                 <td>asdasd</td>
             </tr>
         </table>
+
     </div>
     <!-- Footer -->
     <div class="footer" style="text-align: center;bottom:5px; padding:10px 0;">
-        <hr />
+
         Contect us on
         <a href="#"><i>Facebook</i></a> |
         <a href="#"><i>Instagram</i></a> |
