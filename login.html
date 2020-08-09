@@ -115,6 +115,7 @@
         padding: 60px;
     }
 </style>
+
 </head>
 
 <body>
@@ -142,17 +143,17 @@
     <div class="a">
         <div class="layout" style="text-align:center;padding:70px 20px">
             <h2>Login Page</h2>
-            <form action="#">
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="pass">Password:</label><br>
-                <input type="password" id="pass" name="pass" required><br><br />
+            <form action="index.html" onsubmit="return validatelogin()">
+                Email:<br>
+                <input type="email" id="email" name="email" placeholder="Enter 'admin@mail.com'"><br><br>
+                Password:<br>
+                <input type="password" id="pass" name="pass" placeholder="Enter 'admin'"><br><br />
                 <input type="submit" name="submit" value="Submit">
                 <input type="reset" name="reset" value="reset">
             </form>
         </div>
         <br><br>
-    </div>>
+    </div>
     <div class="footer" style="text-align: center;bottom:5px; padding:10px 0;">
 
         Contect us on
@@ -167,5 +168,34 @@
     </div>
 
 </body>
+
+<script>
+    function validatelogin() {
+
+        var mail = document.getElementById("email");
+        var password = document.getElementById("pass");
+        var z = "admin@mail.com";
+        var x = "admin";
+
+
+        if (mail.value == "") {
+            alert("email can't be blank ");
+            return false;
+        }
+        else if (password.value == "") {
+            alert("Password can't be blank ");
+            return false;
+        }
+        else if (mail.value != z) {
+            alert("Enter proper email ");
+            return false;
+        }
+        else if (password.value != x) {
+            alert("Enter proper password !!!");
+            return false;
+        }
+    }
+
+</script>
 
 </html>

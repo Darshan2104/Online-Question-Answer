@@ -129,8 +129,8 @@
             <!-- </nav> -->
             <!-- tabs  -->
             <!-- <nav id="lable" style="float:top;text-align:center;"> -->
-            <a href="index.html">Home</a>
-            <a href="ask.html">Ask Question</a> &nbsp;
+            <a href="index.html">Home</a>&nbsp;
+            <a href="ask.html">Ask Question</a>&nbsp;
             <a href="categories.html">Categories</a>&nbsp;
             <a href="profile.html">Profile</a>&nbsp;
             <!-- <a href="#">Blog</a>| -->
@@ -144,18 +144,18 @@
     <div class="a">
         <div class="layout" style="text-align: center;">
             <h2>Registration page</h2>
-            <form action="#">
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+            <form action="login.html" name="RegForm" onsubmit="return check()">
+                Email:<br>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required><br><br>
 
-                <label for="profile">Profile Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+                Profile Name:<br>
+                <input type="text" id="name" name="name" placeholder="Enter Profile name"><br><br>
 
-                <label for="pass">Password:</label><br>
-                <input type="password" id="pass" name="pass" required><br><br>
+                Password:<br>
+                <input type="password" id="pass1" name="pass1" placeholder="Password"><br><br>
 
-                <label for="pass">Confirm Password:</label><br>
-                <input type="password" id="pass" name="pass" required><br><br>
+                Confirm Password:<br>
+                <input type="password" id="pass2" name="pass2" placeholder="Conform Password"><br><br>
                 <br />
                 <input type="submit" name="submit" value="Submit">
                 <input type="reset" name="reset" value="reset">
@@ -178,5 +178,32 @@
         </p> -->
     </div>
 </body>
+<script>
+    function check() {
+
+        var z = document.getElementById("pass1");
+        var x = document.getElementById("pass2");
+        var unm = document.getElementById("name");
+        var mail = document.getElementById("email");
+
+        if (unm.value == "") {
+            alert("Please enter your Profile name.");
+            return false;
+        }
+        else if (z.value == "" || x.value == "") {
+            alert("Password can not be empty !!");
+            return false;
+        }
+        else if (z.value != x.value) {
+            alert("Both password must be same !!!");
+            return false;
+        }
+        else if (z.value.length < 6 || x.value.length < 6) {
+            alert("Password lenght must be more then 6 charactor ");
+            return false;
+        }
+
+    }
+</Script>
 
 </html>
