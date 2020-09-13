@@ -1,155 +1,205 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Online Question Answer</title>
-    <style>
-        .header a:link,
-        a:visited {
-            background-color: rgb(255, 251, 210);
-            color: black;
-            padding: 14px 30px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .header a:hover,
-        a:active {
-            background-color: rgb(117, 224, 215);
-        }
-
-        .header {
-            background-color: rgb(164, 255, 247);
-        }
-
-        .all-browsers {
-            margin: 0;
-            padding: 5px;
-            background-color: rgb(107, 201, 193);
-        }
-
-        .all-browsers>h1,
-        .browser {
-            margin: 10px;
-            padding: 5px;
-        }
-
-        .browser {
-            background-color: rgb(255, 251, 210);
-        }
-
-        .browser>h2,
-        p {
-            margin: 4px;
-            font-size: 90%;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 3px;
-            background-color: rgb(164, 255, 247);
-            color: rgb(25, 98, 107);
-        }
-    </style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<!-- button with icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<style>
+    .vl {
+        border-left: 2px solid rgb(179, 169, 169);
+        height: 800px;
+    }
+</style>
+
 
 <body>
-    <hr>
+    <!-- Header -->
     <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
 
-        <nav style="float:top; padding: 10px 150px;"> <a href="index.html">
-                <h3><b>Qeustion Answers</b></h3>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- </nav> -->
-            <!-- tabs  -->
-            <!-- <nav id="lable" style="float:top;text-align:center;"> -->
-            <a href="ask.html">Ask Question</a> &nbsp;
-            <a href="categories.html">Categories</a>&nbsp;
-            <a href="profile.html">Profile</a>&nbsp;
-            <!-- <a href="#">Blog</a>| -->
-            <a href="login.html">Login</a>&nbsp;
-            <a href="registration.html">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo1.png" width="30" height="30" class="d-inline-block align-top" alt=""
+                        loading="lazy"><b>
+                        Question</b>
+                </a>&nbsp;&nbsp;
 
-            <input type="text" placeholder="Search Profile" />
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navigations -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="btn" href="index.html"><i class="fa fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="categories.html" class="btn">
+                                <i class="fa fa-binoculars"></i>Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn" href="Profile.html"><i class="fa fa-user"></i> Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn" href="login.html"><i class="fa fa-flag"></i> Login</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn" href="ask.html">Ask Question <i class="fa fa-plus"></i></a>
+                        </li>
+                    </ul>
+                    <!-- Searching -->
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search Profile"
+                            aria-label="Search">
+                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search </button>
+                    </form>
+                </div>
+            </div>
         </nav>
-        <!-- <hr/> -->
     </div>
-    <!-- <br /> -->
-    <!-- <hr /> -->
-    <!-- main -->
-    <!-- list of Asked questions(latest 10) -->
+    <br />
+    <!-- MAIN PAGE -->
     <div class="main">
-        <article class="all-browsers">
-            <h1>Recently added Questions </h1>
-            <hr />
-            <article class="browser">
-                <table style="width:100%; border: 3px solid black;" title="Click on Question to view">
-                    <tr>
-                        <td style="padding:1%;">
-                            <h2><a href="new.html" style="color: black;text-decoration: none;" target="_blank"
-                                    title="view this Question And it's Answer">Question</a></h2>
-                        </td>
-                    </tr>
-                </table>
-            </article>
-            <br>
+        <!-- <div class="container"> -->
+        <div class="row">
+            <div class="col-2">
+                <div class="container">
+                    <!-- first section -->
+                    <!-- <div class="col">
+                        <div class="row-2">
+                            Tab
+                        </div>
+                        <div class="row-2">
+                            categories
+                        </div>
+                        <div class="row-2">
+                            User
+                        </div>
+                    </div> -->
+                    <div class="sticky">
+                        <div class="col">
+                            <ul class="list-group ">
+                                <li class="list-group-item">
+                                    <a href="#" class="btn "><i class="fa fa-tags"></i> Tag</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="categories.html" class="btn"><i class="fa fa-list"></i> Category</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#" class="btn"><i class="fa fa-users"></i> User</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#" class="btn"> <i class="fa fa-wrench"></i> Help</a>
+                                </li>
+                            </ul>
 
-            <article class="browser">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vl"></div>
 
-                <table style="width:100%; border: 3px solid black;" title="Click on Question to view">
-                    <tr>
-                        <td style="padding:1%;">
-                            <h2><a href="new.html" style="color: black;text-decoration: none;" target="_blank"
-                                    title="view this Question And it's Answer">Question</a></h2>
-                        </td>
-                    </tr>
-                </table>
-            </article>
-            <br>
-            <article class="browser">
-                <table style="width:100%; border: 3px solid black;" title="Click on Question to view">
-                    <tr>
-                        <td style="padding:1%;">
-                            <h2><a href="new.html" style="color: black;text-decoration: none;" target="_blank"
-                                    title="view this Question And it's Answer">Question</a></h2>
-                        </td>
-                    </tr>
-                </table>
-            </article>
-            <br>
+            <div class="col-7">
+                <!-- In Center two row -->
+                <div class="container">
+                    <!-- top on center -->
+                    <div class="row">
+                        <div class="col-8">
+                            <h3 class="display-5"> All Questions</h3>
+                        </div>
+                        <div class="col">
+                            <div> Filter by :
+                                <div class="btn-group btn-sm">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Select Category
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button">Action</button>
+                                        <button class="dropdown-item" type="button">Another action</button>
+                                        <button class="dropdown-item" type="button">Something else here</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-2">
+                    <div class="row">
 
-            <article class="browser">
-                <table style="width:100%; border: 3px solid black;" title="Click on Question to view">
-                    <tr>
-                        <td style="padding:1%;">
-                            <h2><a href="new.html" style="color: black;text-decoration: none;" target="_blank"
-                                    title="view this Question And it's Answer">Question</a></h2>
-                        </td>
-                    </tr>
-                </table>
-            </article>
-            <br>
-        </article>
+                    </div>
+                    <div class="row">
+                        <!-- Particuler One Question -->
+                        <div class="jumbotron">
+                            <p class="lead"><a href="#">Why are the British confused about us calling bread rolls
+                                    “biscuits” when they call bread rolls “puddings”?
+
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Particuler One Question -->
+                        <div class="jumbotron">
+                            <p class="lead"><a href="#">Why are the British confused about us calling bread rolls
+                                    “biscuits” when they call bread rolls “puddings”?
+
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Particuler One Question -->
+                        <div class="jumbotron">
+                            <p class="lead"><a href="#">Why are the British confused about us calling bread rolls
+                                    “biscuits” when they call bread rolls “puddings”?
+
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="vl"></div>
+            <!-- <div class="vl"></div> -->
+
+            <div class="col-2">
+                <div class="container">
+                    <div class="col">
+                        <div class="clearfix"></div>
+                        <a class="btn btn-outline-dark btn-lg btn-block" href="ask.html">Ask Question <i
+                                class="fa fa-plus"></i></a>
+                        <!-- <div class="row"> -->
+                        <div class="clearfix">.................................................................</div>
+                        <h5 text-align="center">Total Question</h5>
+                        <h3> 218</h3>
+                        <div class="clearfix">.................................................................</div>
+                        <h5 text-align="center">Total User</h5>
+                        <h3> 32</h3>
+                        <div class="clearfix">.................................................................</div>
+
+                        <!-- </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
     </div>
-    <!-- <hr /> -->
-    <!-- Footer -->
-    <div class="footer" style="text-align:center;bottom:5px; padding:15px;">
-
-        Contect us on
-        <a href="#"><i>Facebook</i></a> |
-        <a href="#"><i>Instagram</i></a> |
-        <a href="#"><i>Linkedin</i></a> |
-        <a href="#"><i>Youtube</i></a>
-        <!-- <br />
-        <p class="last1">
-            <a href="#">Term and Conditions</a>
-        </p> -->
-    </div>
-
 </body>
 
 </html>
