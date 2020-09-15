@@ -26,7 +26,8 @@
         height: 800px;
     }
 </style>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="my_jquery_functions.js"></script>
 
 <body>
     <!-- Header -->
@@ -63,9 +64,9 @@
                     </ul>
                     <!-- Searching -->
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search Profile"
-                            aria-label="Search">
-                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search </button>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search Question"
+                            aria-label="Search" id="myInput">
+                        <!-- <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search </button> -->
                     </form>
                 </div>
             </div>
@@ -141,37 +142,50 @@
                     <div class="row">
 
                     </div>
-                    <div class="row">
-                        <!-- Particuler One Question -->
-                        <div class="jumbotron">
-                            <p class="lead"><a href="#">Why are the British confused about us calling bread rolls
-                                    “biscuits” when they call bread rolls “puddings”?
+                    <div id="myDIV">
+                        <div class="row">
+                            <!-- Particuler One Question -->
+                            <div class="jumbotron" style="overflow: None;">
+                                <p class="lead"><a href="#">
+                                        <p class="cont">Why are the British confused about us calling bread rolls
+                                            “biscuits” when they call bread rolls “puddings ” ?
+                                            <span id="dots">.... </span><span id="cont">erisque enim ligula venenatis
+                                                dolor.
+                                                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                                                luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed
+                                                ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
+                                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+                                                venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+                                                pulvinar nibh tempor porta.</span></p>
+                                    </a>
+                                    <button id="hide">Less</button>
+                                    <button id="show">More</button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Particuler One Question -->
+                            <div class="jumbotron">
+                                <p class="lead"><a href="#">
+                                        <p class="cont">Question number 2 : you can search for this Question in search
+                                            bar which is
+                                            done using Jquery you can search any Question in Search box !!
+                                    </a>
+                                </p>
 
-                                </a>
-                            </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Particuler One Question -->
+                            <div class="jumbotron">
+                                <p class="lead"><a href="#">Type something in the input field to search for a specific
+                                        text inside this Question section !!!
+
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <!-- Particuler One Question -->
-                        <div class="jumbotron">
-                            <p class="lead"><a href="#">Why are the British confused about us calling bread rolls
-                                    “biscuits” when they call bread rolls “puddings”?
-
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Particuler One Question -->
-                        <div class="jumbotron">
-                            <p class="lead"><a href="#">Why are the British confused about us calling bread rolls
-                                    “biscuits” when they call bread rolls “puddings”?
-
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <div class="vl"></div>
