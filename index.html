@@ -22,7 +22,7 @@
     crossorigin="anonymous"></script>
 <style>
     .vl {
-        border-left: 2px solid rgb(179, 169, 169);
+        border-left: 1px solid rgb(179, 169, 169);
         height: 800px;
     }
 </style>
@@ -32,7 +32,7 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-2 mb-5 rounded">
             <div class="container">
 
                 <a class="navbar-brand" href="index.html">
@@ -62,157 +62,126 @@
                             <a class="btn" href="ask.html">Ask Question <i class="fa fa-plus"></i></a>
                         </li>
                     </ul>
-                    <!-- Searching -->
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search Question"
-                            aria-label="Search" id="myInput">
-                        <!-- <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search </button> -->
-                    </form>
                 </div>
+                <!-- Searching -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Question" aria-label="Search"
+                        id="myInput">
+                    <!-- <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search </button> -->
+                </form>
             </div>
         </nav>
     </div>
-    <br />
     <!-- MAIN PAGE -->
     <div class="main">
-        <!-- <div class="container"> -->
         <div class="row">
-            <div class="col-2">
-                <div class="container">
-                    <!-- first section -->
-                    <!-- <div class="col">
-                        <div class="row-2">
-                            Tab
-                        </div>
-                        <div class="row-2">
-                            categories
-                        </div>
-                        <div class="row-2">
-                            User
-                        </div>
-                    </div> -->
-                    <div class="sticky">
-                        <div class="col">
-                            <ul class="list-group ">
-                                <li class="list-group-item">
-                                    <a href="#" class="btn "><i class="fa fa-tags"></i> Tag</a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="categories.html" class="btn"><i class="fa fa-list"></i> Category</a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="#" class="btn"><i class="fa fa-users"></i> User</a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="#" class="btn"> <i class="fa fa-wrench"></i> Help</a>
-                                </li>
-                            </ul>
+            <div class="col-sm-2 p-3 mt-5">
+                <div class="container p-1">
 
-                        </div>
+                    <!-- first section -->
+                    <div class="row d-flex ml-1 py-1 shadow-sm p-1 mb-3 bg-white rounded">
+                        <a href="#" class="btn"><i class="fa fa-tags"></i> Tag</a>
+                    </div>
+                    <div class="row d-flex ml-1 py-1 shadow-sm p-1 mb-3 bg-white rounded">
+                        <a href="categories.html" class="btn"><i class="fa fa-list"></i> Category</a>
+                    </div>
+                    <div class="row d-flex ml-1 py-1 shadow-sm p-1 mb-3 bg-white rounded">
+                        <a href="#" class="btn"><i class="fa fa-users"></i> User</a>
+                    </div>
+                    <div class="row d-flex ml-1 py-1 shadow-sm p-1 mb-3 bg-white rounded">
+                        <a href="#" class="btn"> <i class="fa fa-wrench"></i> Help</a>
                     </div>
                 </div>
             </div>
-            <div class="vl"></div>
+            <!-- <div class="vl"></div> -->
 
-            <div class="col-7">
+            <div class="col-sm-7">
                 <!-- In Center two row -->
-                <div class="container">
-                    <!-- top on center -->
-                    <div class="row">
-                        <div class="col-8">
-                            <h3 class="display-5"> All Questions</h3>
-                        </div>
-                        <div class="col">
-                            <div> Filter by :
-                                <div class="btn-group btn-sm">
-                                    <button type="button" class="btn btn-secondary dropdown-toggle"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Select Category
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <button class="dropdown-item" type="button">Action</button>
-                                        <button class="dropdown-item" type="button">Another action</button>
-                                        <button class="dropdown-item" type="button">Something else here</button>
-                                    </div>
+                <!-- top on center -->
+                <div class="row">
+                    <div class="col-sm-6 ">
+                        <h3 class="display-5"> All Questions</h3>
+                    </div>
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        <div> Filter by :
+                            <div class="btn-group btn-sm">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Select Category
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <button class="dropdown-item" type="button">Action</button>
+                                    <button class="dropdown-item" type="button">Another action</button>
+                                    <button class="dropdown-item" type="button">Something else here</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <hr class="my-2">
+                </div>
+                <hr class="my-2">
+
+                <div id="myDIV">
                     <div class="row">
-
+                        <!-- Particuler One Question -->
+                        <div class="jumbotron" style="overflow: None;">
+                            <p class="lead"><a href="#">
+                                    <p class="cont">Why are the British confused about us calling bread rolls
+                                        “biscuits” when they call bread rolls “puddings ” ?
+                                        <span id="dots">.... </span><span id="cont">erisque enim ligula venenatis
+                                            dolor.
+                                            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+                                            luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed
+                                            ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
+                                            imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+                                            venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+                                            pulvinar nibh tempor porta.</span></p>
+                                </a>
+                                <button id="hide">Less</button>
+                                <button id="show">More</button>
+                            </p>
+                        </div>
                     </div>
-                    <div id="myDIV">
-                        <div class="row">
-                            <!-- Particuler One Question -->
-                            <div class="jumbotron" style="overflow: None;">
-                                <p class="lead"><a href="#">
-                                        <p class="cont">Why are the British confused about us calling bread rolls
-                                            “biscuits” when they call bread rolls “puddings ” ?
-                                            <span id="dots">.... </span><span id="cont">erisque enim ligula venenatis
-                                                dolor.
-                                                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-                                                luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed
-                                                ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
-                                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
-                                                venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
-                                                pulvinar nibh tempor porta.</span></p>
-                                    </a>
-                                    <button id="hide">Less</button>
-                                    <button id="show">More</button>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- Particuler One Question -->
-                            <div class="jumbotron">
-                                <p class="lead"><a href="#">
-                                        <p class="cont">Question number 2 : you can search for this Question in search
-                                            bar which is
-                                            done using Jquery you can search any Question in Search box !!
-                                    </a>
-                                </p>
+                    <div class="row">
+                        <!-- Particuler One Question -->
+                        <div class="jumbotron">
+                            <p class="lead"><a href="#">
+                                    <p class="cont">Question number 2 : you can search for this Question in search
+                                        bar which is
+                                        done using Jquery you can search any Question in Search box !!
+                                </a>
+                            </p>
 
-                            </div>
                         </div>
-                        <div class="row">
-                            <!-- Particuler One Question -->
-                            <div class="jumbotron">
-                                <p class="lead"><a href="#">Type something in the input field to search for a specific
-                                        text inside this Question section !!!
+                    </div>
+                    <div class="row">
+                        <!-- Particuler One Question -->
+                        <div class="jumbotron">
+                            <p class="lead"><a href="#">Type something in the input field to search for a specific
+                                    text inside this Question section !!!
 
-                                    </a>
-                                </p>
-                            </div>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div class="vl"></div>
             <!-- <div class="vl"></div> -->
+            <div class="col-sm-3">
+                <a class="btn btn-outline-dark btn-lg btn-block" href="ask.html">Ask Question <i
+                        class="fa fa-plus"></i></a>
 
-            <div class="col-2">
-                <div class="container">
-                    <div class="col">
-                        <div class="clearfix"></div>
-                        <a class="btn btn-outline-dark btn-lg btn-block" href="ask.html">Ask Question <i
-                                class="fa fa-plus"></i></a>
-                        <!-- <div class="row"> -->
-                        <div class="clearfix">.................................................................</div>
-                        <h5 text-align="center">Total Question</h5>
-                        <h3> 218</h3>
-                        <div class="clearfix">.................................................................</div>
-                        <h5 text-align="center">Total User</h5>
-                        <h3> 32</h3>
-                        <div class="clearfix">.................................................................</div>
+                <hr>
+                <h5 style="text-align:center">Total Question</h5>
+                <h3 style="text-align:center"> 218</h3>
+                <hr>
+                <h5 style="text-align:center">Total User</h5>
+                <h3 style="text-align:center"> 32</h3>
+                <hr>
 
-                        <!-- </div> -->
-                    </div>
-
-                </div>
             </div>
         </div>
-        <!-- </div> -->
+
     </div>
 </body>
 
